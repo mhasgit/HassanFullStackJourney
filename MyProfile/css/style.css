@@ -82,7 +82,6 @@ nav ul {
 
 .what p {
   margin-top: 20px;
-  margin-bottom: 25px;
 }
 
 .form.container {
@@ -108,46 +107,61 @@ form.nosubmit {
 
 input.nosubmit {
   border: 1px solid #555;
-  width: 100px;
+  width: 15rem;
   padding: 9px 0px 9px 32px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
   background-color: white;
   border-radius: 8px;
+  margin-top: 25px;
+  transition: box-shadow 0.3s ease-in-out
 }
 
-
-.link-1 { grid-area: link-1;}
-.link-2 { grid-area: link-2;}
-.link-3 { grid-area: link-3;}
-.link-4 { grid-area: link-4;}
-.link-5 { grid-area: link-5;}
-.link-6 { grid-area: link-6;}
-.link-7 { grid-area: link-7;}
-.link-8 { grid-area: link-8;}
-.link-9 { grid-area: link-9;}
-.where h3 {
-  color: #4d5361;
-  grid-area: whereto;
-  margin-left: 412px;
-  margin-top: 29px;
+input.nosubmit:hover {
+  box-shadow: 0 0 8px 5px rgba(84, 164, 255, 0.5);
 }
 
 .where {
   background-color: white;
   display: grid;
-  height: 250px;
-  grid-template-areas: 'whereto whereto whereto'
-                        'link-1 link-2 link-3'
-                        'link-4 link-5 link-6'
-                        'link-7 link-8 link-9';
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr 1fr 1fr;
+  grid-gap: 10px;
   margin-left: 50px;
+  padding: 10px;
+  height: 250px;
 }
 
+.link-1 { grid-row: 2; }
+.link-2 { grid-row: 2; }
+.link-3 { grid-row: 2; }
+.link-4 { grid-row: 2; }
+.link-5 { grid-row: 3; }
+.link-6 { grid-row: 3; }
+.link-7 { grid-row: 3; }
+.link-8 { grid-row: 3; }
+.link-9 { grid-row: 4; }
+.link-10 { grid-row: 4; }
+.link-11 { grid-row: 4; }
 
+.where h3 {
+  color: #4d5361;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  justify-self: center;
+  align-self: start;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
 
-/* .where a{
-  margin-top: 83px;
-} */
+.link{
+  color: black;
+  text-decoration: none;
+}
+
+.link:hover{
+  color: rgba(0, 92, 197, 0.5);
+  transform: matrix3d();
+}
 
 .footer {
   background-color: #2f2f2f;
@@ -156,4 +170,14 @@ input.nosubmit {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer a{
+  color: #dfdcda;
+  text-decoration: none;
+}
+
+.footer a:hover{
+  color: rgba(255, 255, 255, 0.5);
+  transform: matrix3d();
 }
